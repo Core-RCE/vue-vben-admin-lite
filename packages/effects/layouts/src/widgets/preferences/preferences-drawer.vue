@@ -17,7 +17,7 @@ import type { SegmentedItem } from '@vben-core/shadcn-ui';
 
 import { computed, ref } from 'vue';
 
-import { Copy, Pin, PinOff, RotateCw } from '@vben/icons';
+import { Copy, RotateCw } from '@vben/icons';
 import { $t, loadLocaleMessages } from '@vben/locales';
 import {
   clearCache,
@@ -76,9 +76,6 @@ const appWatermarkContent = defineModel<string>('appWatermarkContent');
 const appEnableCheckUpdates = defineModel<boolean>('appEnableCheckUpdates');
 const appEnableCopyPreferences = defineModel<boolean>(
   'appEnableCopyPreferences',
-);
-const appEnableStickyPreferencesNavigationBar = defineModel<boolean>(
-  'appEnableStickyPreferencesNavigationBar',
 );
 const appPreferencesButtonPosition = defineModel<PreferencesButtonPositionType>(
   'appPreferencesButtonPosition',
@@ -299,11 +296,7 @@ function handleCustomPreferencesUpdate(updates: CustomPreferencesRecord) {
 
 <template>
   <div>
-    <Drawer
-      :description="$t('preferences.subtitle')"
-      :title="$t('preferences.title')"
-      class="border-0! sm:max-w-sm"
-    >
+    <Drawer :title="$t('preferences.title')" class="border-0! sm:max-w-sm">
       <template #extra>
         <div class="flex items-center">
           <VbenIconButton
@@ -318,36 +311,11 @@ function handleCustomPreferencesUpdate(updates: CustomPreferencesRecord) {
             ></span>
             <RotateCw class="size-4" />
           </VbenIconButton>
-          <VbenIconButton
-            :tooltip="
-              appEnableStickyPreferencesNavigationBar
-                ? $t('preferences.disableStickyPreferencesNavigationBar')
-                : $t('preferences.enableStickyPreferencesNavigationBar')
-            "
-            class="relative"
-            @click="
-              () =>
-                (appEnableStickyPreferencesNavigationBar =
-                  !appEnableStickyPreferencesNavigationBar)
-            "
-          >
-            <PinOff
-              v-if="appEnableStickyPreferencesNavigationBar"
-              class="size-4"
-            />
-            <Pin v-else class="size-4" />
-          </VbenIconButton>
         </div>
       </template>
 
       <div>
-        <VbenSegmented
-          v-model="activeTab"
-          :tabs="tabs"
-          :class="{
-            'sticky-tabs-header': appEnableStickyPreferencesNavigationBar,
-          }"
-        >
+        <VbenSegmented v-model="activeTab" :tabs="tabs">
           <template #general>
             <Block :title="$t('preferences.general')">
               <General
@@ -553,9 +521,3 @@ function handleCustomPreferencesUpdate(updates: CustomPreferencesRecord) {
     </Drawer>
   </div>
 </template>
-
-<style scoped>
-:deep(.sticky-tabs-header [role='tablist']) {
-  @apply -top-3 z-9999 sticky;
-}
-</style>

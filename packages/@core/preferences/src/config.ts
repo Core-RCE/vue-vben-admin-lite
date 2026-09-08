@@ -22,7 +22,6 @@ const defaultPreferences: Preferences = {
     enableCopyPreferences: true,
     enablePreferences: true,
     enableRefreshToken: false,
-    enableStickyPreferencesNavigationBar: true,
     isMobile: false,
     layout: 'sidebar-nav',
     locale: 'zh-CN',

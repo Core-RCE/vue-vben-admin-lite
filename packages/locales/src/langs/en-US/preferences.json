@@ -1,8 +1,5 @@
 {
   "title": "Preferences",
-  "subtitle": "Customize Preferences & Preview in Real Time",
-  "enableStickyPreferencesNavigationBar": "Enable sticky preferences navigation bar",
-  "disableStickyPreferencesNavigationBar": "Disable sticky preferences navigation bar",
   "resetTip": "Data has changed, click to reset",
   "resetTitle": "Reset Preferences",
   "resetSuccess": "Preferences reset successfully",
@@ -199,33 +196,5 @@
     "sidebarToggle": "Enable Sidebar Toggle",
     "refresh": "Enable Refresh",
     "timezone": "Enable Timezone"
-  },
-  "antd": {
-    "tabLabel": "Antd Extension",
-    "title": "Business Preferences",
-    "fields": {
-      "enableFormFullscreen": {
-        "label": "Enable Form Fullscreen Mode",
-        "tip": "Subprojects can read this extension configuration in their own business scenarios."
-      },
-      "tenantMode": {
-        "label": "Tenant Mode",
-        "options": {
-          "single": {
-            "label": "Single Tenant"
-          },
-          "multi": {
-            "label": "Multi Tenant"
-          }
-        }
-      },
-      "defaultTableSize": {
-        "label": "Default Page Size"
-      },
-      "reportTitle": {
-        "label": "Default Report Title",
-        "placeholder": "Please enter the default report title"
-      }
-    }
   }
 }
