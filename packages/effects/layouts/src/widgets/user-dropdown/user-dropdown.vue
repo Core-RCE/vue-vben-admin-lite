@@ -257,7 +257,7 @@ if (enableShortcutKey.value) {
           <VbenIcon :icon="menu.icon" class="mr-2 size-4" />
           {{ menu.text }}
         </DropdownMenuItem>
-        <DropdownMenuSeparator />
+        <DropdownMenuSeparator v-if="menus.length > 0" />
         <DropdownMenuItem
           v-if="preferencesButtonPosition.userDropdown"
           class="mx-1 flex cursor-pointer items-center rounded-sm py-1 leading-8"
