@@ -1,6 +1,5 @@
 import type {
   AccessModeType,
-  AuthPageLayoutType,
   BreadcrumbStyleType,
   BuiltinThemeType,
   ContentCompactType,
@@ -99,8 +98,6 @@ interface PreferencesExtension<
 interface AppPreferences {
   /** 权限模式 */
   accessMode: AccessModeType;
-  /** 登录注册页面布局 */
-  authPageLayout: AuthPageLayoutType;
   /** 检查更新轮询时间 */
   checkUpdatesInterval: number;
   /** 是否开启灰色模式 */
@@ -277,8 +274,6 @@ interface SidebarPreferences {
 interface ShortcutKeyPreferences {
   /** 是否启用快捷键-全局 */
   enable: boolean;
-  /** 是否启用全局锁屏快捷键 */
-  globalLockScreen: boolean;
   /** 是否启用全局注销快捷键 */
   globalLogout: boolean;
   /** 是否启用全局偏好设置快捷键 */
@@ -361,8 +356,6 @@ interface WidgetPreferences {
   globalSearch: boolean;
   /** 是否启用语言切换部件 */
   languageToggle: boolean;
-  /** 是否开启锁屏功能 */
-  lockScreen: boolean;
   /** 是否显示通知部件 */
   notification: boolean;
   /** 显示刷新按钮 */

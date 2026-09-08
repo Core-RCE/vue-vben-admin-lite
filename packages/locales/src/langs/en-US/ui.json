@@ -147,16 +147,6 @@
       "noRecent": "No Search History",
       "recent": "Search History"
     },
-    "lockScreen": {
-      "title": "Lock Screen",
-      "screenButton": "Unlock",
-      "password": "Password",
-      "placeholder": "Please enter password",
-      "unlock": "Click to unlock",
-      "errorPasswordTip": "Password error, please re-enter",
-      "backToLogin": "Back to login",
-      "entry": "Enter the system"
-    },
     "timezone": {
       "setTimezone": "Set Timezone",
       "setSuccess": "Timezone set successfully"

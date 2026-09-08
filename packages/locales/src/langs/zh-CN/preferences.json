@@ -197,7 +197,6 @@
     "languageToggle": "启用语言切换",
     "notification": "启用通知",
     "sidebarToggle": "启用侧边栏切换",
-    "lockScreen": "启用锁屏",
     "refresh": "启用刷新",
     "timezone": "启用时区"
   },

@@ -4,7 +4,6 @@ exports[`defaultPreferences immutability test > should not modify the config obj
 {
   "app": {
     "accessMode": "frontend",
-    "authPageLayout": "panel-right",
     "checkUpdatesInterval": 1,
     "colorGrayMode": false,
     "colorWeakMode": false,
@@ -75,7 +74,6 @@ exports[`defaultPreferences immutability test > should not modify the config obj
   },
   "shortcutKeys": {
     "enable": true,
-    "globalLockScreen": true,
     "globalLogout": true,
     "globalPreferences": true,
     "globalSearch": true,
@@ -135,7 +133,6 @@ exports[`defaultPreferences immutability test > should not modify the config obj
     "fullscreen": true,
     "globalSearch": true,
     "languageToggle": true,
-    "lockScreen": true,
     "notification": true,
     "refresh": true,
     "sidebarToggle": true,

@@ -18,7 +18,6 @@ const widgetLanguageToggle = defineModel<boolean>('widgetLanguageToggle');
 const widgetNotification = defineModel<boolean>('widgetNotification');
 const widgetThemeToggle = defineModel<boolean>('widgetThemeToggle');
 const widgetSidebarToggle = defineModel<boolean>('widgetSidebarToggle');
-const widgetLockScreen = defineModel<boolean>('widgetLockScreen');
 const appPreferencesButtonPosition = defineModel<string>(
   'appPreferencesButtonPosition',
 );
@@ -60,9 +59,6 @@ const positionItems = computed((): SelectOption[] => [
   </SwitchItem>
   <SwitchItem v-model="widgetNotification">
     {{ $t('preferences.widget.notification') }}
-  </SwitchItem>
-  <SwitchItem v-model="widgetLockScreen">
-    {{ $t('preferences.widget.lockScreen') }}
   </SwitchItem>
   <SwitchItem v-model="widgetSidebarToggle">
     {{ $t('preferences.widget.sidebarToggle') }}

@@ -91,14 +91,6 @@ type TabsStyleType = 'brisk' | 'card' | 'chrome' | 'plain';
 type PageTransitionType = 'fade' | 'fade-down' | 'fade-slide' | 'fade-up';
 
 /**
- * 页面切换动画
- * panel-center 居中布局
- * panel-left 居左布局
- * panel-right 居右布局
- */
-type AuthPageLayoutType = 'panel-center' | 'panel-left' | 'panel-right';
-
-/**
  * 时区选项
  */
 interface TimezoneOption {
@@ -109,7 +101,6 @@ interface TimezoneOption {
 
 export type {
   AccessModeType,
-  AuthPageLayoutType,
   BreadcrumbStyleType,
   BuiltinThemeType,
   ContentCompactType,
