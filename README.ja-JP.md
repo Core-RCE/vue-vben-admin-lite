@@ -1,3 +1,5 @@
+> **軽量版について**：Vben 5.7.0 をベースに固定し、`apps/web-antd` と `apps/backend-mock` のみを残しています。ナビゲーションは `/analytics` と `/status`、ログインは中央配置のユーザー名・パスワードフォームのみです。デモ、ワークベンチ、プロフィール、画面ロック、新規登録、その他のログイン方式は削除済みです。`pnpm@10.33.4` で `pnpm install --frozen-lockfile`、`pnpm dev:antd`、`pnpm build:antd` を実行してください。以下の上流プロジェクトの紹介・プレビュー・画像は、この軽量版の機能とは異なります。
+
 <div align="center">
   <a href="https://github.com/anncwb/vue-vben-admin">
     <img alt="VbenAdmin Logo" width="215" src="https://unpkg.com/@vbenjs/static-source@0.1.7/source/logo-v1.webp">
@@ -13,6 +15,15 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=vbenjs_vue-vben-admin&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=vbenjs_vue-vben-admin) ![codeql](https://github.com/vbenjs/vue-vben-admin/actions/workflows/codeql.yml/badge.svg) ![build](https://github.com/vbenjs/vue-vben-admin/actions/workflows/build.yml/badge.svg) ![ci](https://github.com/vbenjs/vue-vben-admin/actions/workflows/ci.yml/badge.svg) ![deploy](https://github.com/vbenjs/vue-vben-admin/actions/workflows/deploy.yml/badge.svg)
 
 **日本語** | [English](./README.md) | [中文](./README.zh-CN.md)
+
+## この軽量版について
+
+5.7.0 のプロジェクトスナップショットを基に、`apps/web-antd` と `apps/backend-mock` のみを残しています。共通パッケージとビルドツールは従来の Monorepo 構成を維持しています。
+
+- 開発：`pnpm dev:antd`（ローカル Mock サーバーも自動起動）。
+- フロントエンドのビルド：`pnpm build:antd`。出力先：`apps/web-antd/dist`。
+- `pnpm build` はフロントエンドと Mock バックエンドをビルドします。
+- ローカルのドキュメントサイトと他の UI アプリは削除済みです。以下の上流プレビュー・ドキュメントへのリンクは参考情報です。
 
 ## 紹介
 

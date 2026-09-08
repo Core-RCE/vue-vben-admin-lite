@@ -36,7 +36,7 @@
 ```typescript
 import { StorageManager } from '@vben-core/shared/cache';
 
-const cache = new StorageManager({ prefix: 'myapp' });
+const cache = new StorageManager({ prefix: 'app' });
 // 使用 IndexedDB
 //new StorageManager({ driver: new IndexedDBDriver(), prefix: 'app' });
 

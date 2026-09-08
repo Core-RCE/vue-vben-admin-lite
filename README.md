@@ -1,3 +1,5 @@
+> **Lite fork**: Frozen from Vben 5.7.0. Only `apps/web-antd` and `apps/backend-mock` remain. Navigation contains `/analytics` and `/status`; authentication uses a centered username/password form. Demos, workbench, profile, screen locking, registration, and alternative login methods have been removed. Use `pnpm@10.33.4`: `pnpm install --frozen-lockfile`, `pnpm dev:antd`, and `pnpm build:antd`. The upstream introduction, hosted previews, and screenshots below do not describe this lite fork.
+
 <div align="center">
   <a href="https://github.com/anncwb/vue-vben-admin">
     <img alt="VbenAdmin Logo" width="215" src="https://unpkg.com/@vbenjs/static-source@0.1.7/source/logo-v1.webp">
@@ -13,6 +15,15 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=vbenjs_vue-vben-admin&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=vbenjs_vue-vben-admin) [![codeql](https://github.com/vbenjs/vue-vben-admin/actions/workflows/codeql.yml/badge.svg)](https://github.com/vbenjs/vue-vben-admin/actions/workflows/codeql.yml) [![build](https://github.com/vbenjs/vue-vben-admin/actions/workflows/build.yml/badge.svg)](https://github.com/vbenjs/vue-vben-admin/actions/workflows/build.yml) [![ci](https://github.com/vbenjs/vue-vben-admin/actions/workflows/ci.yml/badge.svg)](https://github.com/vbenjs/vue-vben-admin/actions/workflows/ci.yml) [![deploy](https://github.com/vbenjs/vue-vben-admin/actions/workflows/deploy.yml/badge.svg)](https://github.com/vbenjs/vue-vben-admin/actions/workflows/deploy.yml)
 
 **English** | [中文](./README.zh-CN.md) | [日本語](./README.ja-JP.md)
+
+## This slimmed-down snapshot
+
+This repository is based on the 5.7.0 project snapshot and retains only `apps/web-antd` and `apps/backend-mock`, together with the shared monorepo packages and build tools.
+
+- Develop: `pnpm dev:antd` (starts the local Mock server by default).
+- Build the frontend: `pnpm build:antd`; output: `apps/web-antd/dist`.
+- `pnpm build` builds both the frontend and the Mock backend.
+- The local documentation site and other UI applications have been removed. Upstream preview and documentation links below are references only.
 
 ## Introduction
 

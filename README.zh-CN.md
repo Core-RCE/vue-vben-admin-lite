@@ -1,3 +1,5 @@
+> **精简版说明**：当前仓库基于 Vben 5.7.0 冻结精简，只保留 `apps/web-antd` 和 `apps/backend-mock`。导航包含 `/analytics` 和 `/status` 状态页，登录仅支持居中的账号密码表单；项目演示、工作台、个人中心、锁屏、注册和其他登录方式均已移除。依赖使用 `pnpm@10.33.4`，执行 `pnpm install --frozen-lockfile`、`pnpm dev:antd`、`pnpm build:antd`。下文保留上游项目介绍，在线预览和截图不代表此精简版功能。
+
 <div align="center">
   <a href="https://github.com/anncwb/vue-vben-admin">
     <img alt="VbenAdmin Logo" width="215" src="https://unpkg.com/@vbenjs/static-source@0.1.7/source/logo-v1.webp">
@@ -13,6 +15,15 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=vbenjs_vue-vben-admin&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=vbenjs_vue-vben-admin) ![codeql](https://github.com/vbenjs/vue-vben-admin/actions/workflows/codeql.yml/badge.svg) ![build](https://github.com/vbenjs/vue-vben-admin/actions/workflows/build.yml/badge.svg) ![ci](https://github.com/vbenjs/vue-vben-admin/actions/workflows/ci.yml/badge.svg) ![deploy](https://github.com/vbenjs/vue-vben-admin/actions/workflows/deploy.yml/badge.svg)
 
 **中文** | [English](./README.md) | [日本語](./README.ja-JP.md)
+
+## 当前精简版本
+
+本仓库以 5.7.0 项目快照为基线，仅保留 `apps/web-antd` 和 `apps/backend-mock`。共享包与构建工具仍采用原有 Monorepo 结构。
+
+- 开发：`pnpm dev:antd`（默认自动启动本地 Mock）。
+- 前端构建：`pnpm build:antd`，产物位于 `apps/web-antd/dist`。
+- `pnpm build` 会同时构建前端和 Mock 后端。
+- 本地文档站及其他 UI 应用已移除；下方上游预览和文档链接仅供参考。
 
 ## 简介
 

@@ -12,7 +12,7 @@ const knipMain = require.resolve('knip');
 const knipCli = join(dirname(knipMain), '..', 'bin', 'knip.js');
 
 const DEFAULT_CONFIG = {
-  ignore: ['dist/**', 'docs/**', 'node_modules/**', 'public/**'],
+  ignore: ['dist/**', 'node_modules/**', 'public/**'],
   ignoreBinaries: [] as string[],
   ignoreDependencies: [
     '@iconify/json',
@@ -52,7 +52,7 @@ interface KnipResult {
  * 格式化依赖检查结果
  * @param result - 依赖检查结果
  */
-function formatResult(result: KnipResult): void {
+function formatResult(result: KnipResult): boolean {
   let hasIssues = false;
 
   for (const issue of result.issues) {
@@ -84,6 +84,7 @@ function formatResult(result: KnipResult): void {
   if (!hasIssues) {
     console.log('\n✅ Dependency check completed, no issues found');
   }
+  return hasIssues;
 }
 
 /**
@@ -118,10 +119,13 @@ async function runKnipCheck(): Promise<void> {
 
     if (execaError.exitCode === 1 && execaError.stdout) {
       const result: KnipResult = JSON.parse(execaError.stdout);
-      formatResult(result);
+      if (formatResult(result)) {
+        process.exitCode = 1;
+      }
       return;
     }
 
+    process.exitCode = 1;
     console.error(
       '❌ Dependency check failed:',
       error instanceof Error ? error.message : error,
