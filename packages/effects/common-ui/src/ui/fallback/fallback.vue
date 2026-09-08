@@ -19,7 +19,6 @@ const props = withDefaults(defineProps<Props>(), {
   description: '',
   homePath: '/',
   image: '',
-  showBack: true,
   status: 'coming-soon',
   title: '',
 });

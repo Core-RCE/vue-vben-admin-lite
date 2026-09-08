@@ -5,5 +5,13 @@
   },
   "dashboard": {
     "analytics": "Analytics"
+  },
+  "status": {
+    "title": "Status Pages",
+    "forbidden": "403 Forbidden",
+    "notFound": "404 Not Found",
+    "internalError": "500 Internal Error",
+    "offline": "Offline",
+    "comingSoon": "Coming Soon"
   }
 }
