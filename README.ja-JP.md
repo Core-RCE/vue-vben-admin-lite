@@ -16,7 +16,7 @@
 
 Vue Vben Admin Lite は、[Vben Admin](https://github.com/vbenjs/vue-vben-admin) **5.7.0 を固定ベースとして軽量化**した管理画面テンプレートです。Vue 3、TypeScript、Vite、Ant Design Vue を使用しています。元のプロジェクトの規模と、頻繁な上流の変更に追従する保守コストを抑え、業務開発に必要な基盤を残すことを目的としています。
 
-残しているアプリは `apps/web-antd` と `apps/backend-mock` のみです。共通パッケージとビルドツールの Monorepo 構成は維持しています。他の UI アプリ、playground、ローカルのドキュメントサイトは削除済みで、上流の新バージョンへの継続的な追従は目的としていません。
+`apps` ディレクトリには `frontend`、`backend`、`backend-mock` を配置しています。旧 `web-antd` アプリは `frontend` に変更し、`backend` は将来の業務バックエンド用に予約、`backend-mock` はローカル開発用 Mock として使用します。共通パッケージとビルドツールの Monorepo 構成は維持しています。他の UI アプリ、playground、ローカルのドキュメントサイトは削除済みで、上流の新バージョンへの継続的な追従は目的としていません。
 
 ## 特徴
 
@@ -54,16 +54,16 @@ pnpm install --frozen-lockfile
 3. フロントエンドを起動（ローカル Mock もデフォルトで同時起動）
 
 ```bash
-pnpm dev:antd
+pnpm dev:frontend
 ```
 
 4. フロントエンドをビルド
 
 ```bash
-pnpm build:antd
+pnpm build:frontend
 ```
 
-フロントエンドの出力先は `apps/web-antd/dist` です。フロントエンドと Mock バックエンドを両方ビルドする場合は `pnpm build` を実行してください。
+フロントエンドの出力先は `apps/frontend/dist` です。フロントエンドと Mock バックエンドを両方ビルドする場合は `pnpm build` を実行してください。
 
 ## 変更ログ
 

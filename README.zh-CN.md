@@ -16,7 +16,7 @@
 
 Vue Vben Admin Lite 是基于 [Vben Admin](https://github.com/vbenjs/vue-vben-admin) **5.7.0 冻结精简**的中后台模板，采用 Vue 3、TypeScript、Vite 和 Ant Design Vue。项目旨在减少原版体量和频繁跟进上游提交带来的维护成本，为后续业务开发保留必要的基础能力。
 
-当前仅保留 `apps/web-antd` 和 `apps/backend-mock`，沿用共享包与构建工具的 Monorepo 结构。其他 UI 应用、playground 和本地文档站均已移除，不以持续同步上游新版本为目标。
+当前 `apps` 目录包含 `frontend`、`backend` 和 `backend-mock`：原 `web-antd` 应用已重命名为 `frontend`，`backend` 预留给后续业务后端代码，`backend-mock` 用于本地开发 Mock。共享包与构建工具的 Monorepo 结构保持不变。其他 UI 应用、playground 和本地文档站均已移除，不以持续同步上游新版本为目标。
 
 ## 特性
 
@@ -54,16 +54,16 @@ pnpm install --frozen-lockfile
 3. 启动前端（默认同时启动本地 Mock）
 
 ```bash
-pnpm dev:antd
+pnpm dev:frontend
 ```
 
 4. 构建前端
 
 ```bash
-pnpm build:antd
+pnpm build:frontend
 ```
 
-前端产物位于 `apps/web-antd/dist`。如需同时构建前端与 Mock 后端，执行 `pnpm build`。
+前端产物位于 `apps/frontend/dist`。如需同时构建前端与 Mock 后端，执行 `pnpm build`。
 
 ## 更新日志
 

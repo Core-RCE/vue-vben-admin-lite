@@ -16,7 +16,7 @@
 
 Vue Vben Admin Lite is a slimmed-down admin template based on the frozen [Vben Admin](https://github.com/vbenjs/vue-vben-admin) 5.7.0 baseline. It uses Vue 3, TypeScript, Vite, and Ant Design Vue. The goal is to reduce the size of the original project and the maintenance cost of tracking frequent upstream changes, providing a focused starting point for further development.
 
-Only `apps/web-antd` and `apps/backend-mock` remain, alongside the shared monorepo packages and build tools. Other UI applications, the playground, and the local documentation site have been removed. This fork does not aim to stay in sync with every upstream release.
+The `apps` directory is organized into `frontend`, `backend`, and `backend-mock`. The frontend is the slimmed-down `web-antd` application renamed to `frontend`; `backend` is reserved for future business backend code, while `backend-mock` provides the local development Mock service. Shared monorepo packages and build tools remain available. Other UI applications, the playground, and the local documentation site have been removed. This fork does not aim to stay in sync with every upstream release.
 
 ## Features
 
@@ -54,16 +54,16 @@ pnpm install --frozen-lockfile
 3. Start the frontend (also starts the local Mock server by default)
 
 ```bash
-pnpm dev:antd
+pnpm dev:frontend
 ```
 
 4. Build the frontend
 
 ```bash
-pnpm build:antd
+pnpm build:frontend
 ```
 
-Frontend output: `apps/web-antd/dist`. Use `pnpm build` to build both the frontend and Mock backend.
+Frontend output: `apps/frontend/dist`. Use `pnpm build` to build both the frontend and Mock backend.
 
 ## Change Log
 

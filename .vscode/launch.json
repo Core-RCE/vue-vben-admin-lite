@@ -11,7 +11,7 @@
         "NODE_ENV": "development"
       },
       "sourceMaps": true,
-      "webRoot": "${workspaceFolder}/apps/web-antd"
+      "webRoot": "${workspaceFolder}/apps/frontend"
     }
   ]
 }
