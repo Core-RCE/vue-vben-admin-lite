@@ -62,7 +62,7 @@ catalog:
   '@types/html-minifier-terser': ^7.0.2
   '@types/jsonwebtoken': ^9.0.10
   '@types/lodash.clonedeep': ^4.5.9
-  '@types/node': ^25.9.1
+  '@types/node': ^26.4.1
   '@types/nprogress': ^0.2.3
   '@types/qs': ^6.15.1
   '@types/sortablejs': ^1.15.9
