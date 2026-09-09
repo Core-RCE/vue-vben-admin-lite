@@ -1,103 +1,77 @@
-> **軽量版について**：Vben 5.7.0 をベースに固定し、`apps/web-antd` と `apps/backend-mock` のみを残しています。ナビゲーションは `/analytics` と `/status`、ログインは中央配置のユーザー名・パスワードフォームのみです。デモ、ワークベンチ、プロフィール、画面ロック、新規登録、その他のログイン方式は削除済みです。`pnpm@10.33.4` で `pnpm install --frozen-lockfile`、`pnpm dev:antd`、`pnpm build:antd` を実行してください。以下の上流プロジェクトの紹介・プレビュー・画像は、この軽量版の機能とは異なります。
-
 <div align="center">
-  <a href="https://github.com/anncwb/vue-vben-admin">
+  <a href="https://github.com/Core-RCE/vue-vben-admin-lite">
     <img alt="VbenAdmin Logo" width="215" src="https://unpkg.com/@vbenjs/static-source@0.1.7/source/logo-v1.webp">
   </a>
   <br>
   <br>
 
-[![license](https://img.shields.io/github/license/anncwb/vue-vben-admin.svg)](LICENSE)
+[![license](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-  <h1>Vue Vben Admin</h1>
+  <h1>Vue Vben Admin Lite</h1>
 </div>
-
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=vbenjs_vue-vben-admin&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=vbenjs_vue-vben-admin) ![codeql](https://github.com/vbenjs/vue-vben-admin/actions/workflows/codeql.yml/badge.svg) ![build](https://github.com/vbenjs/vue-vben-admin/actions/workflows/build.yml/badge.svg) ![ci](https://github.com/vbenjs/vue-vben-admin/actions/workflows/ci.yml/badge.svg) ![deploy](https://github.com/vbenjs/vue-vben-admin/actions/workflows/deploy.yml/badge.svg)
 
 **日本語** | [English](./README.md) | [中文](./README.zh-CN.md)
 
-## この軽量版について
-
-5.7.0 のプロジェクトスナップショットを基に、`apps/web-antd` と `apps/backend-mock` のみを残しています。共通パッケージとビルドツールは従来の Monorepo 構成を維持しています。
-
-- 開発：`pnpm dev:antd`（ローカル Mock サーバーも自動起動）。
-- フロントエンドのビルド：`pnpm build:antd`。出力先：`apps/web-antd/dist`。
-- `pnpm build` はフロントエンドと Mock バックエンドをビルドします。
-- ローカルのドキュメントサイトと他の UI アプリは削除済みです。以下の上流プレビュー・ドキュメントへのリンクは参考情報です。
-
 ## 紹介
 
-Vue Vben Adminは、最新の`vue3`、`vite`、`TypeScript`などの主流技術を使用して開発された、無料でオープンソースの中・後端テンプレートです。すぐに使える中・後端のフロントエンドソリューションとして、学習の参考にもなります。
+Vue Vben Admin Lite は、[Vben Admin](https://github.com/vbenjs/vue-vben-admin) **5.7.0 を固定ベースとして軽量化**した管理画面テンプレートです。Vue 3、TypeScript、Vite、Ant Design Vue を使用しています。元のプロジェクトの規模と、頻繁な上流の変更に追従する保守コストを抑え、業務開発に必要な基盤を残すことを目的としています。
 
-## アップグレード通知
-
-これは最新バージョン `5.0` であり、以前のバージョンとは互換性がありません。新しいプロジェクトを開始する場合は、最新バージョンを使用することをお勧めします。古いバージョンを表示したい場合は、[v2ブランチ](https://github.com/vbenjs/vue-vben-admin/tree/v2)を使用してください。
+残しているアプリは `apps/web-antd` と `apps/backend-mock` のみです。共通パッケージとビルドツールの Monorepo 構成は維持しています。他の UI アプリ、playground、ローカルのドキュメントサイトは削除済みで、上流の新バージョンへの継続的な追従は目的としていません。
 
 ## 特徴
 
-- **最新技術スタック**：Vue 3やViteなどの最先端フロントエンド技術で開発
-- **TypeScript**：アプリケーション規模のJavaScriptのための言語
-- **テーマ**：複数のテーマカラーが利用可能で、カスタマイズオプションも豊富
-- **国際化**：完全な内蔵国際化サポート
-- **権限管理**：動的ルートベースの権限生成ソリューションを内蔵
-
-## プレビュー
-
-- [Vben Admin](https://vben.pro/) - フルバージョンの中国語サイト
-
-テストアカウント：vben/123456
-
-<div align="center">
-  <img alt="VbenAdmin Logo" width="100%" src="https://anncwb.github.io/anncwb/images/preview1.png">
-  <img alt="VbenAdmin Logo" width="100%" src="https://anncwb.github.io/anncwb/images/preview2.png">
-  <img alt="VbenAdmin Logo" width="100%" src="https://anncwb.github.io/anncwb/images/preview3.png">
-</div>
-
-### Gitpodを使用
-
-Gitpod（GitHub用の無料オンライン開発環境）でプロジェクトを開き、すぐにコーディングを開始します。
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/vbenjs/vue-vben-admin)
+- **シンプルなナビゲーション**：分析ページをトップレベルに配置し、ステータスメニューに 403、404、500、オフライン、公開準備中の5種類を用意
+- **ログインの簡素化**：中央配置のユーザー名・パスワードログインのみを残し、ロール選択、新規登録、電話番号・QRコード・外部サービスによるログイン、画面ロックを削除
+- **デモの削除**：プロジェクトとデモのメニュー、ワークベンチ、プロフィール、Antd 拡張デモを削除
+- **設定**：テーマ設定と国際化機能を維持
+- **権限の基盤**：ロールと動的ルートの権限管理を維持。業務固有の権限制御は別途実装が必要
+- **ローカル Mock**：開発用の `backend-mock` を維持
 
 ## ドキュメント
 
-[ドキュメント](https://doc.vben.pro/)
+[Vben の上流ドキュメント](https://doc.vben.pro/)は共通パッケージや設定方法の参考に利用できます。アプリやデモの説明は、この軽量版に当てはまらない場合があります。
 
 ## インストールと使用
+
+`package.json` に合わせて、Node.js `^22.18.0 || ^24.0.0` と `pnpm@10.33.4` を使用してください。
 
 1. プロジェクトコードを取得
 
 ```bash
-git clone https://github.com/vbenjs/vue-vben-admin.git
+git clone https://github.com/Core-RCE/vue-vben-admin-lite.git
+cd vue-vben-admin-lite
 ```
 
-2. 依存関係のインストール
+2. 指定バージョンのパッケージマネージャーを有効にして依存関係をインストール
 
 ```bash
-cd vue-vben-admin
 npm i -g corepack
-pnpm install
+corepack enable
+corepack prepare pnpm@10.33.4 --activate
+pnpm install --frozen-lockfile
 ```
 
-3. 実行
+3. フロントエンドを起動（ローカル Mock もデフォルトで同時起動）
 
 ```bash
-pnpm dev
+pnpm dev:antd
 ```
 
-4. ビルド
+4. フロントエンドをビルド
 
 ```bash
-pnpm build
+pnpm build:antd
 ```
+
+フロントエンドの出力先は `apps/web-antd/dist` です。フロントエンドと Mock バックエンドを両方ビルドする場合は `pnpm build` を実行してください。
 
 ## 変更ログ
 
-[CHANGELOG](https://github.com/vbenjs/vue-vben-admin/releases)
+軽量版の変更は、このリポジトリの Git 履歴を参照してください。[上流のリリース履歴](https://github.com/vbenjs/vue-vben-admin/releases)は元のプロジェクトの参考情報です。
 
 ## 貢献方法
 
-ご参加をお待ちしております！[Issueを提出](https://github.com/anncwb/vue-vben-admin/issues/new/choose)するか、Pull Requestを送信してください。
+ご参加をお待ちしております！[Issueを提出](https://github.com/Core-RCE/vue-vben-admin-lite/issues)するか、Pull Requestを送信してください。
 
 **Pull Request プロセス：**
 
@@ -135,33 +109,11 @@ pnpm build
 
 ## メンテナー
 
-[@Vben](https://github.com/anncwb)
+[@Core-RCE](https://github.com/Core-RCE)
 
 ## スター歴史
 
-[![Star History Chart](https://api.star-history.com/svg?repos=vbenjs/vue-vben-admin&type=Date)](https://star-history.com/#vbenjs/vue-vben-admin&Date)
-
-## 寄付
-
-このプロジェクトが役に立つと思われた場合、作者にコーヒーを一杯おごってサポートを示すことができます！
-
-![donate](https://unpkg.com/@vbenjs/static-source@0.1.7/source/sponsor.png)
-
-<a style="display: block;width: 100px;height: 50px;line-height: 50px; color: #fff;text-align: center; background: #408aed;border-radius: 4px;" href="https://www.paypal.com/paypalme/cvvben">Paypal Me</a>
-
-## 貢献者
-
-<a href="https://openomy.app/github/vbenjs/vue-vben-admin" target="_blank" style="display: block; width: 100%;" align="center">
-  <img src="https://openomy.app/svg?repo=vbenjs/vue-vben-admin&chart=bubble&latestMonth=3" target="_blank" alt="Contribution Leaderboard" style="display: block; width: 100%;" />
- </a>
-
-<a href="https://github.com/vbenjs/vue-vben-admin/graphs/contributors">
-  <img alt="Contributors" src="https://contrib.rocks/image?repo=vbenjs/vue-vben-admin" />
-</a>
-
-## Discord
-
-- [Github Discussions](https://github.com/anncwb/vue-vben-admin/discussions)
+[![Star History Chart](https://api.star-history.com/svg?repos=Core-RCE/vue-vben-admin-lite&type=Date)](https://star-history.com/#Core-RCE/vue-vben-admin-lite&Date)
 
 ## ライセンス
 

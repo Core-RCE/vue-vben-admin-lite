@@ -1,103 +1,77 @@
-> **精简版说明**：当前仓库基于 Vben 5.7.0 冻结精简，只保留 `apps/web-antd` 和 `apps/backend-mock`。导航包含 `/analytics` 和 `/status` 状态页，登录仅支持居中的账号密码表单；项目演示、工作台、个人中心、锁屏、注册和其他登录方式均已移除。依赖使用 `pnpm@10.33.4`，执行 `pnpm install --frozen-lockfile`、`pnpm dev:antd`、`pnpm build:antd`。下文保留上游项目介绍，在线预览和截图不代表此精简版功能。
-
 <div align="center">
-  <a href="https://github.com/anncwb/vue-vben-admin">
+  <a href="https://github.com/Core-RCE/vue-vben-admin-lite">
     <img alt="VbenAdmin Logo" width="215" src="https://unpkg.com/@vbenjs/static-source@0.1.7/source/logo-v1.webp">
   </a>
   <br>
   <br>
 
-[![license](https://img.shields.io/github/license/anncwb/vue-vben-admin.svg)](LICENSE)
+[![license](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-  <h1>Vue Vben Admin</h1>
+  <h1>Vue Vben Admin Lite</h1>
 </div>
-
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=vbenjs_vue-vben-admin&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=vbenjs_vue-vben-admin) ![codeql](https://github.com/vbenjs/vue-vben-admin/actions/workflows/codeql.yml/badge.svg) ![build](https://github.com/vbenjs/vue-vben-admin/actions/workflows/build.yml/badge.svg) ![ci](https://github.com/vbenjs/vue-vben-admin/actions/workflows/ci.yml/badge.svg) ![deploy](https://github.com/vbenjs/vue-vben-admin/actions/workflows/deploy.yml/badge.svg)
 
 **中文** | [English](./README.md) | [日本語](./README.ja-JP.md)
 
-## 当前精简版本
-
-本仓库以 5.7.0 项目快照为基线，仅保留 `apps/web-antd` 和 `apps/backend-mock`。共享包与构建工具仍采用原有 Monorepo 结构。
-
-- 开发：`pnpm dev:antd`（默认自动启动本地 Mock）。
-- 前端构建：`pnpm build:antd`，产物位于 `apps/web-antd/dist`。
-- `pnpm build` 会同时构建前端和 Mock 后端。
-- 本地文档站及其他 UI 应用已移除；下方上游预览和文档链接仅供参考。
-
 ## 简介
 
-Vue Vben Admin 是 Vue Vben Admin 的升级版本。作为一个免费开源的中后台模板，它采用了最新的 Vue 3、Vite、TypeScript 等主流技术开发，开箱即用，可用于中后台前端开发，也适合学习参考。
+Vue Vben Admin Lite 是基于 [Vben Admin](https://github.com/vbenjs/vue-vben-admin) **5.7.0 冻结精简**的中后台模板，采用 Vue 3、TypeScript、Vite 和 Ant Design Vue。项目旨在减少原版体量和频繁跟进上游提交带来的维护成本，为后续业务开发保留必要的基础能力。
 
-## 升级提示
-
-该版本为最新版本 `5.0`，与其他版本不兼容，如果你是新项目，建议使用最新版本。如果你想查看旧版本，请使用 [v2 分支](https://github.com/vbenjs/vue-vben-admin/tree/v2)
+当前仅保留 `apps/web-antd` 和 `apps/backend-mock`，沿用共享包与构建工具的 Monorepo 结构。其他 UI 应用、playground 和本地文档站均已移除，不以持续同步上游新版本为目标。
 
 ## 特性
 
-- **最新技术栈**：使用 Vue3/vite 等前端前沿技术开发
-- **TypeScript**：应用程序级 JavaScript 的语言
-- **主题**：提供多套主题色彩，可配置自定义主题
-- **国际化**：内置完善的国际化方案
-- **权限**：内置完善的动态路由权限生成方案
-
-## 预览
-
-- [Vben Admin](https://vben.pro/) - 完整版中文站点
-
-测试账号：vben/123456
-
-<div align="center">
-  <img alt="VbenAdmin Logo" width="100%" src="https://anncwb.github.io/anncwb/images/preview1.png">
-  <img alt="VbenAdmin Logo" width="100%" src="https://anncwb.github.io/anncwb/images/preview2.png">
-  <img alt="VbenAdmin Logo" width="100%" src="https://anncwb.github.io/anncwb/images/preview3.png">
-</div>
-
-### 使用 Gitpod
-
-在 Gitpod（适用于 GitHub 的免费在线开发环境）中打开项目，并立即开始编码。
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/vbenjs/vue-vben-admin)
+- **精简导航**：分析页作为一级导航，状态页菜单包含 403、404、500、离线和即将上线五类页面
+- **简化登录**：仅保留居中的账号密码登录，移除角色选择、注册、手机号登录、扫码登录、第三方登录和锁屏
+- **移除演示**：删除项目及演示菜单、工作台、个人中心和 Antd 拓展示例
+- **偏好设置**：保留主题配置与国际化能力
+- **权限基础**：保留角色与动态路由权限框架，具体业务权限仍需按实际需求实现
+- **本地 Mock**：保留 `backend-mock`，用于开发调试
 
 ## 文档
 
-[文档地址](https://doc.vben.pro/)
+[Vben 上游文档](https://doc.vben.pro/)可用于参考共享包和配置方式，其中涉及的应用及演示功能不一定适用于此精简版。
 
 ## 安装使用
+
+环境要求与 `package.json` 保持一致：Node.js `^22.18.0 || ^24.0.0`，使用 `pnpm@10.33.4`。
 
 1. 获取项目代码
 
 ```bash
-git clone https://github.com/vbenjs/vue-vben-admin.git
+git clone https://github.com/Core-RCE/vue-vben-admin-lite.git
+cd vue-vben-admin-lite
 ```
 
-2. 安装依赖
+2. 启用指定版本的包管理器并安装依赖
 
 ```bash
-cd vue-vben-admin
 npm i -g corepack
-pnpm install
+corepack enable
+corepack prepare pnpm@10.33.4 --activate
+pnpm install --frozen-lockfile
 ```
 
-3. 运行
+3. 启动前端（默认同时启动本地 Mock）
 
 ```bash
-pnpm dev
+pnpm dev:antd
 ```
 
-4. 打包
+4. 构建前端
 
 ```bash
-pnpm build
+pnpm build:antd
 ```
+
+前端产物位于 `apps/web-antd/dist`。如需同时构建前端与 Mock 后端，执行 `pnpm build`。
 
 ## 更新日志
 
-[CHANGELOG](https://github.com/vbenjs/vue-vben-admin/releases)
+精简版改动以本仓库的 Git 提交记录为准。[上游发布记录](https://github.com/vbenjs/vue-vben-admin/releases)仅供追溯原项目版本。
 
 ## 如何贡献
 
-非常欢迎你的加入！[提一个 Issue](https://github.com/anncwb/vue-vben-admin/issues/new/choose) 或者提交一个 Pull Request。
+非常欢迎你的加入！[提一个 Issue](https://github.com/Core-RCE/vue-vben-admin-lite/issues) 或者提交一个 Pull Request。
 
 **Pull Request 流程：**
 
@@ -135,33 +109,11 @@ pnpm build
 
 ## 维护者
 
-[@Vben](https://github.com/anncwb)
+[@Core-RCE](https://github.com/Core-RCE)
 
 ## Star 历史
 
-[![Star History Chart](https://api.star-history.com/svg?repos=vbenjs/vue-vben-admin&type=Date)](https://star-history.com/#vbenjs/vue-vben-admin&Date)
-
-## 捐赠
-
-如果你觉得这个项目对你有帮助，你可以帮作者买一杯咖啡表示支持！
-
-![donate](https://unpkg.com/@vbenjs/static-source@0.1.7/source/sponsor.png)
-
-<a style="display: block;width: 100px;height: 50px;line-height: 50px; color: #fff;text-align: center; background: #408aed;border-radius: 4px;" href="https://www.paypal.com/paypalme/cvvben">Paypal Me</a>
-
-## 贡献者
-
-<a href="https://openomy.app/github/vbenjs/vue-vben-admin" target="_blank" style="display: block; width: 100%;" align="center">
-  <img src="https://openomy.app/svg?repo=vbenjs/vue-vben-admin&chart=bubble&latestMonth=3" target="_blank" alt="Contribution Leaderboard" style="display: block; width: 100%;" />
- </a>
-
-<a href="https://github.com/vbenjs/vue-vben-admin/graphs/contributors">
-  <img alt="Contributors" src="https://contrib.rocks/image?repo=vbenjs/vue-vben-admin" />
-</a>
-
-## Discord
-
-- [Github Discussions](https://github.com/anncwb/vue-vben-admin/discussions)
+[![Star History Chart](https://api.star-history.com/svg?repos=Core-RCE/vue-vben-admin-lite&type=Date)](https://star-history.com/#Core-RCE/vue-vben-admin-lite&Date)
 
 ## 许可证
 
