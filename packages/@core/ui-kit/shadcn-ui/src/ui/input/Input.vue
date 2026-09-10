@@ -32,10 +32,16 @@ const modelValue = useVModel(props, 'modelValue', emits, {
 </template>
 <style lang="scss" scoped>
 input {
-  --ring: var(--primary);
+  &:focus {
+    box-shadow: none;
+  }
 
   &:focus-visible {
-    box-shadow: inset 0 0 0 1px hsl(var(--ring));
+    border-color: hsl(var(--primary));
+  }
+
+  &[aria-invalid='true'] {
+    border-color: hsl(var(--destructive));
   }
 
   &::-ms-reveal,

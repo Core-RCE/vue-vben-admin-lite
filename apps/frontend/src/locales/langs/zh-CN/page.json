@@ -6,6 +6,7 @@
   "dashboard": {
     "analytics": "分析页"
   },
+  "inputGroup": "输入框组",
   "status": {
     "title": "状态页",
     "forbidden": "403 无权访问",

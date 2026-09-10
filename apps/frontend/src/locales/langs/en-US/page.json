@@ -6,6 +6,7 @@
   "dashboard": {
     "analytics": "Analytics"
   },
+  "inputGroup": "Input Group",
   "status": {
     "title": "Status Pages",
     "forbidden": "403 Forbidden",
