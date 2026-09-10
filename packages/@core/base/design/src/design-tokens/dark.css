@@ -14,12 +14,8 @@
   /* --card: 222.2 84% 4.9%; */
   --card-foreground: 210 40% 98%;
 
-  /* Background color for popovers such as <DropdownMenu />, <HoverCard />, <Popover /> */
-
-  /* --popover: 222.82deg 8.43% 12.27%; */
-
-  /* 弹出层的背景色与主题区域背景色太过接近  */
-  --popover: 0 0% 14.2%;
+  /* 默认弹出层跟随全局基础背景色，保留边框和阴影区分层级 */
+  --popover: var(--background);
   --popover-foreground: 210 40% 98%;
 
   /* Muted backgrounds such as <TabsList />, <Skeleton /> and <Switch /> */

@@ -18,7 +18,7 @@
   --card-foreground: 222.2 84% 4.9%;
 
   /* Background color for popovers such as <DropdownMenu />, <HoverCard />, <Popover /> */
-  --popover: 0 0% 100%;
+  --popover: var(--background);
   --popover-foreground: 222.2 84% 4.9%;
 
   /* Muted backgrounds such as <TabsList />, <Skeleton /> and <Switch /> */
@@ -124,7 +124,7 @@
   --card-foreground: 222.2 84% 4.9%;
 
   /* Background color for popovers such as <DropdownMenu />, <HoverCard />, <Popover /> */
-  --popover: 0 0% 100%;
+  --popover: var(--background);
   --popover-foreground: 222.2 84% 4.9%;
 
   /* Muted backgrounds such as <TabsList />, <Skeleton /> and <Switch /> */
